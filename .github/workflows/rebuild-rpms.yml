@@ -1212,7 +1212,16 @@ jobs:
     # existed to consume until a merge landed -- so an image could never be
     # tested against the packages it was meant to use before merging either of
     # them. A registry has no such rule.
-    if: ${{ !cancelled() && needs.prepare.outputs.stage0 != '[]' }}
+    #
+    # A pull request from a fork is the exception, and it has to be stated
+    # rather than assumed: GitHub gives those a read-only GITHUB_TOKEN, so the
+    # GHCR login and push would fail however the rest of the run went. Skipping
+    # is honest; failing on a permission that was never going to be granted is
+    # noise that reads like a broken pipeline.
+    if: >-
+      ${{ !cancelled() && needs.prepare.outputs.stage0 != '[]'
+          && (github.event_name != 'pull_request'
+              || github.event.pull_request.head.repo.full_name == github.repository) }}
     needs: [prepare, rebuild0, rebuild1, rebuild2, rebuild3, rebuild4]
     runs-on: ubuntu-24.04
     outputs:
