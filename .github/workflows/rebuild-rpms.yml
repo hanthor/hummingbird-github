@@ -94,7 +94,7 @@ jobs:
               find /work/result -name "*.rpm" -type f -print0 | \
                 xargs -0 -r rpm -qp --qf "%{NAME}-%{VERSION}-%{RELEASE}.%{ARCH}\n"
             '
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: rpm-${{ matrix.package }}
           path: |
@@ -110,7 +110,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           pattern: rpm-*
           path: repository
