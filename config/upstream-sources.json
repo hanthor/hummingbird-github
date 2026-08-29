@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "packages": [
+    {
+      "name": "anaconda",
+      "version": "45.22",
+      "url": "https://github.com/rhinstaller/anaconda/releases/download/anaconda-45.22/anaconda-45.22.tar.bz2",
+      "filename": "anaconda-45.22.tar.bz2",
+      "sha512": "a9244cc457563520a434f6e46c9e862e9b2a2f4ee01e41d5dfc288fa93bcd2d5c2d1e5d16c8733ab619c3a666252e39200688077010168e43d9ec1d81d0c377f"
+    },
+    {
+      "name": "ddcutil",
+      "version": "2.2.1",
+      "url": "https://github.com/rockowitz/ddcutil/archive/v2.2.1/ddcutil-2.2.1.tar.gz",
+      "filename": "ddcutil-2.2.1.tar.gz",
+      "sha512": "119db19d4ca95ffcd50a0d40aebde15f346fbd745b5c84e9d58d8895a51acba52040540b1a325bd61f2c791a525c556526536df1e24c684cfd3b7c7ebfa2e589"
+    },
+    {
+      "name": "distrobox",
+      "version": "1.8.2.5",
+      "url": "https://github.com/89luca89/distrobox/archive/1.8.2.5/distrobox-1.8.2.5.tar.gz",
+      "filename": "distrobox-1.8.2.5.tar.gz",
+      "sha512": "f4dcd9a2edd2db8de6af50e3b6df4e43e793d9baff28529879dcbe3a05cbebf8ad02bef1c8a6b8951c9855e82e6991bd17a8cf2025e1ca285b7dbe80396b1da6"
+    },
+    {
+      "name": "evtest",
+      "version": "1.36",
+      "url": "http://gitlab.freedesktop.org/libevdev/evtest/-/archive/evtest-1.36/evtest-1.36.tar.bz2",
+      "filename": "evtest-1.36.tar.bz2",
+      "sha512": "8ca0c2250d696902707b077db2beca40f097be20ba45b23d0e31d164ea4583444735b4b6f2ebe5485564d1e96030cdaf753f7c7b4af8142f95119ee790bb037f"
+    },
+    {
+      "name": "fastfetch",
+      "version": "2.66.0",
+      "url": "https://github.com/fastfetch-cli/fastfetch/archive/2.66.0/fastfetch-2.66.0.tar.gz",
+      "filename": "fastfetch-2.66.0.tar.gz",
+      "sha512": "dc067be6742b1193a6f7719333ecd418289c23b2c8ffc7f603eb9dd39b3b279536edcb87bc0e00f1a3a1a6f581e290b89e8cc5acd40a806bef1ba141b45d34c5"
+    },
+    {
+      "name": "flatpak-xdg-utils",
+      "version": "1.0.6",
+      "url": "https://github.com/flatpak/flatpak-xdg-utils/releases/download/1.0.6/flatpak-xdg-utils-1.0.6.tar.xz",
+      "filename": "flatpak-xdg-utils-1.0.6.tar.xz",
+      "sha512": "6407d76021e08fe181a3e5c2e0f2868aa2185c3e83115d0d87550a6c294a4c131a98e80e0d9e73d874ac0afe8375338935e213686ca7124e42a80b64ada2496f"
+    },
+    {
+      "name": "gnome-ponytail-daemon",
+      "version": "0.0.11",
+      "url": "https://gitlab.gnome.org/ofourdan/gnome-ponytail-daemon/-/archive/0.0.11/gnome-ponytail-daemon-0.0.11.tar.gz",
+      "filename": "gnome-ponytail-daemon-0.0.11.tar.gz",
+      "sha512": "237178387abef8beecb38c108476e73dad3190f58fd9e99298d284d88536795da6d78634b008a86044379f4ab0336ee7dd556b945261caf1251f24a4c35572eb"
+    },
+    {
+      "name": "gnome-tweaks",
+      "version": "49.0",
+      "url": "https://download.gnome.org/sources/gnome-tweaks/49/gnome-tweaks-49.0.tar.xz",
+      "filename": "gnome-tweaks-49.0.tar.xz",
+      "sha512": "ec07fbc8c1b24b5366e80aa3b4d795633616703994bfd5785b1691a84d53f5419d9494142143b31fc0dd448be3968c4b300adefdc2239f9e99ccd3955c8691ff"
+    },
+    {
+      "name": "gvfs",
+      "version": "1.61.91",
+      "url": "https://download.gnome.org/sources/gvfs/1.61/gvfs-1.61.91.tar.xz",
+      "filename": "gvfs-1.61.91.tar.xz",
+      "sha512": "6873df98a1589a9b7216e2e0abc7b0391478a38561eebf3970e6a05baa6f4e842fc43eb2c243ae5ea9a000e941601e01f39507fb6f1fae23fc5a11bff42e0b98"
+    },
+    {
+      "name": "igt-gpu-tools",
+      "version": "2.5",
+      "url": "https://www.x.org/archive/individual/app/igt-gpu-tools-2.5.tar.xz",
+      "filename": "igt-gpu-tools-2.5.tar.xz",
+      "sha512": "0da8f56a76bb79186da95545be63b8fa82c93edfe9b5fe6ffe43017deb792601545bba292c516b525e1e29087e9b048751df4875d8a7a64e265bac943bf6be81"
+    },
+    {
+      "name": "intel-gmmlib",
+      "version": "22.10.1",
+      "url": "https://github.com/intel/gmmlib/archive/intel-gmmlib-22.10.1.tar.gz",
+      "filename": "intel-gmmlib-22.10.1.tar.gz",
+      "sha512": "d5fc772b6ef91973f398edf5eb01c98eb318f9847e1ef1ba34aeee029abe69ed0884a1be90df81f034ac2faed4515364caecaa5dd6a4cb32414b89b27bfca8aa"
+    },
+    {
+      "name": "intel-mediasdk",
+      "version": "23.2.2",
+      "url": "https://github.com/Intel-Media-SDK/MediaSDK/archive/intel-mediasdk-23.2.2.tar.gz",
+      "filename": "intel-mediasdk-23.2.2.tar.gz",
+      "sha512": "d4cfebee4f689b93c0171775ff2bab449f801c55822c5b800fe3217653d197216cf2a95dea115cf51f308e158adea7a271f03081b011e024c16bf7915fdcd586"
+    },
+    {
+      "name": "intel-vpl-gpu-rt",
+      "version": "26.1.6",
+      "url": "https://github.com/intel/vpl-gpu-rt/archive/intel-onevpl-26.1.6/intel-onevpl-26.1.6.tar.gz",
+      "filename": "intel-onevpl-26.1.6.tar.gz",
+      "sha512": "b65892b1dd1a09477c772320bc272d7223afdca0fe80df1dcdadb9417277178cef7651372e8874c6bf111ee75c56950ef1f1496c2e1108ff45eda8206e83e1a8"
+    },
+    {
+      "name": "isomd5sum",
+      "version": "1.2.5",
+      "url": "https://github.com/rhinstaller/isomd5sum/archive/1.2.5/isomd5sum-1.2.5.tar.gz",
+      "filename": "isomd5sum-1.2.5.tar.gz",
+      "sha512": "aa6bb16be18b42925ac1834aa4d558fafdba7751639acfb7344a79f7ead1125d810f13c442458526f394d8790369b1c48ab41cb73881808740263161caa99655"
+    },
+    {
+      "name": "libappindicator",
+      "version": "12.10.1",
+      "url": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libappindicator/12.10.1+20.10.20200706.1-0ubuntu1/libappindicator_12.10.1+20.10.20200706.1.orig.tar.gz",
+      "filename": "libappindicator_12.10.1+20.10.20200706.1.orig.tar.gz",
+      "sha512": "cc60875b1c4ab06348eece442a59a4057d7e13f25605435902242558e8dd5e66aeeee6725b9bd2662ef89052d3614dc4577ed8c233e9b84236a75e771aa67352"
+    },
+    {
+      "name": "libayatana-appindicator",
+      "version": "0.5.94",
+      "url": "https://github.com/AyatanaIndicators/libayatana-appindicator/archive/0.5.94/libayatana-appindicator-0.5.94.tar.gz",
+      "filename": "libayatana-appindicator-0.5.94.tar.gz",
+      "sha512": "4bd251dd56601dfb99b0085cc272118680c9145cdac671ad6695ef3200e582343a07e99dc30f5a72b586b6e2e60de0042d4a95b9d9eeafa7695b0afe2425dba4"
+    },
+    {
+      "name": "libblockdev",
+      "version": "3.5.0",
+      "url": "https://github.com/storaged-project/libblockdev/releases/download/3.5.0/libblockdev-3.5.0.tar.gz",
+      "filename": "libblockdev-3.5.0.tar.gz",
+      "sha512": "bdc22bd2ec23a6e0fcee9e41d6e4ed05645b7c5413874e6ed8bc0f2ad17d5e671ed966e8697a2a2b65738eb49830ade3c302a93f9facb7542685e544ebe9106a"
+    },
+    {
+      "name": "libheif",
+      "version": "1.23.1",
+      "url": "https://github.com/strukturag/libheif/archive/v1.23.1/libheif-1.23.1.tar.gz",
+      "filename": "libheif-1.23.1.tar.gz",
+      "sha512": "ebb0bf74d6d1ae2d39a7cefcec0f4a04006fee330e147c49c863f6d4febb45e82ccebf36cc4e30812bd3591918ee8964fbde9a3a4793c5f60eaf30a0e011add0"
+    },
+    {
+      "name": "libratbag",
+      "version": "0.18",
+      "url": "https://github.com/libratbag/libratbag/archive/v0.18/libratbag-0.18.tar.gz",
+      "filename": "libratbag-0.18.tar.gz",
+      "sha512": "ae1796d738f7e448c6022c56cb876af5fb43e29b89fef31bbf42b9c838a07fd1d6cf94815dfde87dcd94a72bae159ca14624826b75cf83c988ba4c20340031cb"
+    },
+    {
+      "name": "libva",
+      "version": "2.24.1",
+      "url": "https://github.com/intel/libva/archive/2.24.1/libva-2.24.1.tar.gz",
+      "filename": "libva-2.24.1.tar.gz",
+      "sha512": "368bca5a0d3f0989a51d663e20027f7ab7c705d6204ec54a65a1457236c5930fd816b3d7618078f3495d73e944341b71a48f0fbdca4d036de0a54cee77438515"
+    },
+    {
+      "name": "libva-utils",
+      "version": "2.24.0",
+      "url": "https://github.com/intel/libva-utils/archive/2.24.0/libva-utils-2.24.0.tar.gz",
+      "filename": "libva-utils-2.24.0.tar.gz",
+      "sha512": "299add13d11354d443422dfe7538d29290339ac3368849c544248b542da442f3a8b6fb50c0beb9b2d5c7f947510e1c480ec0bd99ce869c2ea80a45c3bb800f06"
+    },
+    {
+      "name": "make",
+      "version": "4.4.1",
+      "url": "https://ftp.gnu.org/gnu/make/make-4.4.1.tar.gz",
+      "filename": "make-4.4.1.tar.gz",
+      "sha512": "145260cbd6a8226cef3dfef0c8baba31847beaebc7e6b65d39d02715fd4f4cab9b139b6c3772e550088d4f9ae80c6d3ed20b9a7664c693644dfb96b4cb60e67c"
+    },
+    {
+      "name": "openrgb",
+      "version": "1.0~rc2",
+      "url": "https://gitlab.com/CalcProgrammer1/OpenRGB/-/archive/74cbdcce55711f57b3ca4439d3136f5bb7068db7/OpenRGB-74cbdcce55711f57b3ca4439d3136f5bb7068db7.tar.bz2",
+      "filename": "OpenRGB-74cbdcce55711f57b3ca4439d3136f5bb7068db7.tar.bz2",
+      "sha512": "7b0805040bc5f31870155fbfc8d273e7cd0df692816b4ad7f3ff1da492365c015dfddbc8299444a1f7315eebb0e8663ddf5a8ccf023b6cd2648ee8a85159fe0d"
+    },
+    {
+      "name": "rust-just",
+      "version": "1.57.0",
+      "url": "https://crates.io/api/v1/crates/just/1.57.0/download#/just-1.57.0.crate",
+      "filename": "download",
+      "sha512": "6ce10edbc41b3d23dc12dd2cbf27e4fcf84902cce26404a5da520549981a906feb7e11c17f2e1f4c4b2ed111b7cab8431a39b8d57db5175dedcb983d752a71fd"
+    },
+    {
+      "name": "slitherer",
+      "version": "0~git20251108.d230dba",
+      "url": "https://gitlab.com/VelocityLimitless/Projects/slitherer/-/archive/d230dbaa42d652419d2b7299bd0e650f63e5dbea/slitherer-d230dba.tar.gz",
+      "filename": "slitherer-d230dba.tar.gz",
+      "sha512": "bd71224d52c8bb30cf31ebcd6a216f9f55ea6439df825ff8e1d97d3f6f1c37c2786b11c413c2a551a092a670e445aee8b613c2665df6e0d47aecfd9b277e1ac7"
+    },
+    {
+      "name": "squashfs-tools",
+      "version": "4.7.4",
+      "url": "https://github.com/plougher/squashfs-tools/archive/4.7.4/squashfs-tools-4.7.4.tar.gz",
+      "filename": "squashfs-tools-4.7.4.tar.gz",
+      "sha512": "16943b331723c301d7e65c14e5946d3fa27f974ba509a412ab6182a48d83a935d445feb80a27d89a5b5ba5cf86e55835f12d28c2b2b57f5623e1151cb2966376"
+    },
+    {
+      "name": "switcheroo-control",
+      "version": "3.0",
+      "url": "https://gitlab.freedesktop.org/hadess/switcheroo-control/-/releases/3.0/downloads/switcheroo-control-3.0.tar.xz",
+      "filename": "switcheroo-control-3.0.tar.xz",
+      "sha512": "f2b3df3f0254a13f2e046269b612f90d15c4f6ce22f9e6463b156a03de271d30519fed9002f7faae76ca84a5e6001550d8003901d5a228694375ae56a640ad61"
+    },
+    {
+      "name": "wireguard-tools",
+      "version": "1.0.20260223",
+      "url": "https://git.zx2c4.com/wireguard-tools/snapshot/wireguard-tools-1.0.20260223.tar.xz",
+      "filename": "wireguard-tools-1.0.20260223.tar.xz",
+      "sha512": "ab56199345fdc385e62e414ec200c10777c985fb2bde767f9c76e049f47bc6d2ae83ed12d60dc1ebe0e66f22f7a7e554c13ab13837fb8cb2fbd5481149b07654"
+    },
+    {
+      "name": "wl-clipboard",
+      "version": "2.3.0",
+      "url": "https://github.com/bugaevc/wl-clipboard/archive/v2.3.0/wl-clipboard-2.3.0.tar.gz",
+      "filename": "wl-clipboard-2.3.0.tar.gz",
+      "sha512": "101dd7a18fbaee0754318cf9ec8403068df4091ccc5d3dd0bd1e46627d56a183c718c206816c08e5dbadf6fd5c747fa0c95eca1925fa27c7eeda133909696f9b"
+    },
+    {
+      "name": "xdg-terminal-exec",
+      "version": "0.14.2",
+      "url": "https://github.com/Vladimir-csp/xdg-terminal-exec/archive/v0.14.2/xdg-terminal-exec-0.14.2.tar.gz",
+      "filename": "xdg-terminal-exec-0.14.2.tar.gz",
+      "sha512": "b7bbfbc3dd96952b389b28d68440e9e265ea08f8af0e700f40305c8f4277ffd4d49bacb2b41af41c9bce5451d16be56edb5eecaf62add3692181778dd119d315"
+    },
+    {
+      "name": "zenity",
+      "version": "4.2.2",
+      "url": "https://download.gnome.org/sources/zenity/4.2/zenity-4.2.2.tar.xz",
+      "filename": "zenity-4.2.2.tar.xz",
+      "sha512": "383ca702e096b1ac1b26db431aa9c3c78b2e4ce62c2a8ea60d7f40ca8ed86095b73cc17d96590c7bf51916447e5533caef18ae9d524e6cf365cba13a544d72ec"
+    }
+  ]
+}
