@@ -32,7 +32,7 @@ jobs:
       - name: Explain update policy
         run: |
           echo 'Fedora is a compatibility build root, not a source-update feed.'
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: rawhide-availability
           path: |
