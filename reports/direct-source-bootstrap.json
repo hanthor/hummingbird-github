@@ -1,0 +1,165 @@
+{
+  "accepted": 30,
+  "rejected": [
+    {
+      "package": "adw-gtk3-theme",
+      "spec": "packages/adw-gtk3-theme/adw-gtk3-theme.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "adwaita-fonts",
+      "spec": "packages/adwaita-fonts/adwaita-fonts.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "alsa-firmware",
+      "spec": "packages/alsa-firmware/alsa-firmware.spec",
+      "reason": "Source0 is not a direct HTTP(S) URL"
+    },
+    {
+      "package": "alsa-tools",
+      "spec": "packages/alsa-tools/alsa-tools.spec",
+      "reason": "Source0 is not a direct HTTP(S) URL"
+    },
+    {
+      "package": "bootc",
+      "spec": "packages/bootc/bootc.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "containerd",
+      "spec": "packages/containerd/containerd.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "dracut",
+      "spec": "packages/dracut/dracut.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "firefox",
+      "spec": "packages/firefox/firefox.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "firewalld",
+      "spec": "packages/firewalld/firewalld.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "fish",
+      "spec": "packages/fish/fish.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "fzf",
+      "spec": "packages/fzf/fzf.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "gcc",
+      "spec": "packages/gcc/gcc.spec",
+      "reason": "Command '['rpmspec', '-q', '--qf', '%{NAME}', '/workspace/packages/gcc/gcc.spec']' returned non-zero exit status 1."
+    },
+    {
+      "package": "git",
+      "spec": "packages/git/git.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "gnome-shell-extension-gsconnect",
+      "spec": "packages/gnome-shell-extension-gsconnect/gnome-shell-extension-gsconnect.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "google-noto-sans-cjk-vf-fonts",
+      "spec": "packages/google-noto-sans-cjk-vf-fonts/google-noto-sans-cjk-vf-fonts.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "grub2",
+      "spec": "packages/grub2/grub2.spec",
+      "reason": "Command '['rpmspec', '-q', '--qf', '%{NAME}', '/workspace/packages/grub2/grub2.spec']' returned non-zero exit status 1."
+    },
+    {
+      "package": "gum",
+      "spec": "packages/gum/gum.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "ibus-unikey",
+      "spec": "packages/ibus-unikey/ibus-unikey.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "input-remapper",
+      "spec": "packages/input-remapper/input-remapper.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "intel-media-driver-free",
+      "spec": "packages/intel-media-driver-free/intel-media-driver-free.spec",
+      "reason": "Source0 is not a direct HTTP(S) URL"
+    },
+    {
+      "package": "libcamera",
+      "spec": "packages/libcamera/libcamera.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "libisoburn",
+      "spec": "packages/libisoburn/libisoburn.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "libxcrypt",
+      "spec": "packages/libxcrypt/libxcrypt.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "livesys-scripts",
+      "spec": "packages/livesys-scripts/livesys-scripts.spec",
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "package": "mesa",
+      "spec": "packages/mesa/mesa.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "mesa-libGLU",
+      "spec": "packages/mesa-libGLU/mesa-libGLU.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "mozc",
+      "spec": "packages/mozc/mozc.spec",
+      "reason": "Source0 is not a direct HTTP(S) URL"
+    },
+    {
+      "package": "openssh",
+      "spec": "packages/openssh/openssh.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "rust-bootupd",
+      "spec": "packages/rust-bootupd/rust-bootupd.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "switcheroo-control",
+      "spec": "packages/switcheroo-control/switcheroo-control.spec",
+      "reason": "<urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "package": "waypipe",
+      "spec": "packages/waypipe/waypipe.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    },
+    {
+      "package": "zsh",
+      "spec": "packages/zsh/zsh.spec",
+      "reason": "additional Source entries require an explicit verified source-closure mapping"
+    }
+  ]
+}
