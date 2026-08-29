@@ -1,0 +1,8 @@
+{
+  "package": "accountsservice",
+  "branch": "rawhide",
+  "remote": "https://src.fedoraproject.org/rpms/accountsservice.git",
+  "commit": "65d399bd14163f97dda1e267bb297e8080440e44",
+  "tree": "b8cebfc51b59a41bdf36df558cbedfaa0f9172be",
+  "imported_at": "2026-08-29T08:26:12.158342+00:00"
+}

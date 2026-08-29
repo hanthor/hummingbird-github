@@ -1,7 +1,13 @@
-[tunaos-hummingbird]
-name=TunaOS Hummingbird packages
-baseurl=https://repo.tunaos.org/hummingbird/20251124-$basearch/
+# Hummingbird's own rebuilt packages -- every RPM here carries a hum disttag.
+# It is an overlay, not a distribution: roughly 3,500 packages covering the
+# base OS (openssl, glibc, python3, bootc) and no desktop stack at all. It is
+# paired with a Fedora repository, exactly as Hummingbird pairs it upstream in
+# images/variables.yml, and takes precedence via priority.
+[public-hummingbird-x86_64-rpms]
+name=public-hummingbird-x86_64-rpms
+baseurl=https://packages.redhat.com/api/pulp-content/public-hummingbird/x86_64/
 enabled=1
+sslverify=1
 gpgcheck=0
-repo_gpgcheck=0
-priority=5
+priority=10
+zchunk=false

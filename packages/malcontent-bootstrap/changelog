@@ -1,0 +1,107 @@
+* Thu Jan 22 2026 Jan Horak <jhorak@redhat.com> - 0.14.alpha-2
+- Update to 0.14.alpha
+
+* Fri Jan 16 2026 Fedora Release Engineering <releng@fedoraproject.org> - 0.13.0-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_44_Mass_Rebuild
+
+* Thu Jul 24 2025 Fedora Release Engineering <releng@fedoraproject.org> - 0.13.0-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_43_Mass_Rebuild
+
+* Fri Jan 17 2025 Fedora Release Engineering <releng@fedoraproject.org> - 0.13.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_42_Mass_Rebuild
+
+* Thu Nov 14 2024 Michel Lind <salimma@fedoraproject.org> - 0.13.0-1
+- Update to 0.13.0
+- Resolves: rhbz#2325062
+
+* Thu Oct 24 2024 Steve Cossette <farchord@gmail.com> - 0.12.0-1
+- 0.12.0
+
+* Mon Sep 02 2024 Miroslav Suchý <msuchy@redhat.com> - 0.11.1-7
+- convert license to SPDX
+
+* Thu Jul 18 2024 Fedora Release Engineering <releng@fedoraproject.org> - 0.11.1-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_41_Mass_Rebuild
+
+* Thu Jan 25 2024 Fedora Release Engineering <releng@fedoraproject.org> - 0.11.1-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_40_Mass_Rebuild
+
+* Sun Jan 21 2024 Fedora Release Engineering <releng@fedoraproject.org> - 0.11.1-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_40_Mass_Rebuild
+
+* Tue Nov 07 2023 Neal Gompa <ngompa@fedoraproject.org> - 0.11.1-3
+- Rebuild for appstream 1.0
+
+* Thu Jul 20 2023 Fedora Release Engineering <releng@fedoraproject.org> - 0.11.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_39_Mass_Rebuild
+
+* Thu Mar 16 2023 Bastien Nocera <bnocera@redhat.com> - 0.11.1-1
+- Update to 0.11.1
+
+* Thu Jan 19 2023 Fedora Release Engineering <releng@fedoraproject.org> - 0.11.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_38_Mass_Rebuild
+
+* Mon Sep 12 2022 Bastien Nocera <bnocera@redhat.com> - 0.11.0-1
++ malcontent-0.11.0-1
+- Update to 0.11.0
+
+* Tue Aug 02 2022 Bastien Nocera <bnocera@redhat.com> - 0.10.5-1
++ malcontent-0.10.5-1
+- Update to 0.10.5 (#2113504)
+
+* Thu Jul 21 2022 Fedora Release Engineering <releng@fedoraproject.org> - 0.10.3-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild
+
+* Thu Jan 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 0.10.3-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
+
+* Mon Nov 08 2021 Bastien Nocera <bnocera@redhat.com> - 0.10.3-1
+- Update to 0.10.3 (#2020858)
+
+* Mon Oct 04 2021 Bastien Nocera <bnocera@redhat.com> - 0.10.2-2
++ malcontent-0.10.2-2
+- Make parental controls app unremovable (#2009852)
+
+* Mon Oct 04 2021 Bastien Nocera <bnocera@redhat.com> - 0.10.2-1
++ malcontent-0.10.2-1
+- Update to 0.10.2
+
+* Thu Sep 09 2021 Bastien Nocera <bnocera@redhat.com> - 0.10.1-2
++ malcontent-0.10.1-2
+- Make Parental controls app require the malcontent base package
+- Fixes: rhbz#2001555
+
+* Thu Aug 26 2021 Bastien Nocera <bnocera@redhat.com> - 0.10.1-1
++ malcontent-0.10.1-1
+- Update to 0.10.1
+- Hide management application in GNOME, it's accessible through the User accounts panel
+
+* Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.10.0-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
+* Tue Jan 26 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.10.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
+
+* Wed Dec 16 2020 Bastien Nocera <bnocera@redhat.com> - 0.10.0-1
++ malcontent-0.10.0-1
+- Update to 0.10.0
+
+* Tue Sep 08 2020 Bastien Nocera <bnocera@redhat.com> - 0.8.0-5
++ malcontent-0.8.0-5
+- More review comments
+
+* Mon Sep 07 2020 Bastien Nocera <bnocera@redhat.com> - 0.8.0-4
++ malcontent-0.8.0-4
+- Fix more review comments again
+
+* Fri Sep 04 2020 Bastien Nocera <bnocera@redhat.com> - 0.8.0-3
++ malcontent-0.8.0-3
+- Fix more review comments
+
+* Fri Aug 28 2020 Bastien Nocera <bnocera@redhat.com> - 0.8.0-2
++ malcontent-0.8.0-2
+- Fix review comments
+
+* Thu Jul 23 2020 Bastien Nocera <bnocera@redhat.com> - 0.8.0-1
++ malcontent-0.8.0-1
+- First package

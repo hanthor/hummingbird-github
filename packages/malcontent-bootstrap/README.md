@@ -1,0 +1,3 @@
+# malcontent
+
+The malcontent package

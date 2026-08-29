@@ -66,7 +66,16 @@ Patch9:		mozc-fix-2257171.patch
 BuildRequires:	python gettext
 BuildRequires:	libstdc++-devel zlib-devel libxcb-devel glib2-devel gtk2-devel
 BuildRequires:  protobuf-devel < 4
+# protobuf3-c exists only from Fedora 45 on, where the base protobuf is 33.x
+# and a protobuf-3 compat build of the C bindings is needed alongside it.
+# Fedora 44 -- the release Hummingbird pairs with -- already ships protobuf
+# 3.19.6, so its plain protobuf-c is that same protobuf-3 build under the
+# original name, and protobuf3-c is absent entirely.
+%if 0%{?fedora} >= 45
 BuildRequires:  protobuf3-c
+%else
+BuildRequires:  protobuf-c
+%endif
 BuildRequires:	abseil-cpp-devel
 %if %{with qt}
 BuildRequires:	qt5-qtbase-devel
