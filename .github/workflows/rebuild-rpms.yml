@@ -1260,6 +1260,7 @@ jobs:
         id: oci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DOCKER_CONFIG: ${{ runner.temp }}/.docker
         run: |
           set -euo pipefail
           owner=$(echo "${{ github.repository_owner }}" | tr "[:upper:]" "[:lower:]")
@@ -1272,9 +1273,16 @@ jobs:
             tag=$(echo "${{ github.ref_name }}" | tr "/" "-" | tr -cd "[:alnum:]._-" | cut -c1-96)
           fi
           printf "FROM scratch\nCOPY repository /repository\n" > Containerfile.repo
-          echo "${GITHUB_TOKEN}" | podman login ghcr.io -u "${{ github.actor }}" --password-stdin
+          # cosign signs by pushing to the same registry, but it reads the
+          # Docker config rather than podman own auth file, so the login has to
+          # land somewhere both of them look. DOCKER_CONFIG is set on this step
+          # and on the signing step to the same directory.
+          mkdir -p "${DOCKER_CONFIG}"
+          echo "${GITHUB_TOKEN}" | podman login ghcr.io -u "${{ github.actor }}" \
+            --password-stdin --authfile "${DOCKER_CONFIG}/config.json"
           podman build --tag "${image}:${tag}" --file Containerfile.repo .
-          podman push "${image}:${tag}" --digestfile /tmp/digest
+          podman push "${image}:${tag}" --digestfile /tmp/digest \
+            --authfile "${DOCKER_CONFIG}/config.json"
           digest=$(cat /tmp/digest)
           echo "ref=${image}:${tag}" >> "$GITHUB_OUTPUT"
           echo "digest=${digest}" >> "$GITHUB_OUTPUT"
@@ -1297,6 +1305,7 @@ jobs:
       - name: Sign the published image
         env:
           COSIGN_YES: "true"
+          DOCKER_CONFIG: ${{ runner.temp }}/.docker
         run: |
           owner=$(echo "${{ github.repository_owner }}" | tr "[:upper:]" "[:lower:]")
           cosign sign "ghcr.io/${owner}/utah-packages@${{ steps.oci.outputs.digest }}"
