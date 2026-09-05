@@ -36,7 +36,7 @@ jobs:
     outputs:
       packages: ${{ steps.matrix.outputs.packages }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - id: matrix
         run: |
           packages=$(jq -c '[.packages[].name]' config/upstream-sources.json)
@@ -50,7 +50,7 @@ jobs:
         package: ${{ fromJSON(needs.prepare.outputs.packages) }}
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Fetch and verify direct upstream source
         env:
           PACKAGE: ${{ matrix.package }}
