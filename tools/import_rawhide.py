@@ -12,8 +12,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 
-def run(*args: str, cwd: Path | None = None) -> str:
-    return subprocess.check_output(args, cwd=cwd, text=True).strip()
+from tools.common import run
 
 
 def main() -> int:

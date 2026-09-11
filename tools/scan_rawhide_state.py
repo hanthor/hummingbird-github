@@ -28,13 +28,7 @@ def query(package: str) -> dict[str, str] | None:
     return {"name": name, "evr": evr, "arch": arch, "sourcerpm": sourcerpm}
 
 
-def source_name(sourcerpm: str) -> str:
-    # Fedora source RPM versions begin with a digit; package names may contain '-'.
-    import re
-    match = re.match(r"^(.+)-[0-9][^-]*-.*\.src\.rpm$", sourcerpm)
-    if not match:
-        raise ValueError(f"cannot parse source RPM: {sourcerpm}")
-    return match.group(1)
+from tools.common import parse_source_name as source_name
 
 
 def main() -> int:
