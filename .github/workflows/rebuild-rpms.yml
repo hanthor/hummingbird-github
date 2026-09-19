@@ -32,7 +32,7 @@ concurrency:
 
 jobs:
   prepare:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     outputs:
       packages: ${{ steps.matrix.outputs.packages }}
     steps:
@@ -48,7 +48,7 @@ jobs:
       fail-fast: false
       matrix:
         package: ${{ fromJSON(needs.prepare.outputs.packages) }}
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@v4
       - name: Fetch and verify direct upstream source
@@ -105,7 +105,7 @@ jobs:
   publish:
     if: github.ref == 'refs/heads/main' && needs.prepare.outputs.packages != '[]'
     needs: rebuild
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
