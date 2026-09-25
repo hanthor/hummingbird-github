@@ -11,8 +11,14 @@ from __future__ import annotations
 import argparse
 import json
 import subprocess
+import sys
 import tomllib
 from pathlib import Path
+
+# python3 tools/scan_rawhide_state.py (how every workflow invokes this) puts
+# tools/ itself on sys.path, not the repo root, so "tools" is not importable
+# as a package without this. Must run before the tools.common import below.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 
 def query(package: str) -> dict[str, str] | None:

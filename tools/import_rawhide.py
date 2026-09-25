@@ -7,10 +7,15 @@ import argparse
 import json
 import shutil
 import subprocess
+import sys
 import tempfile
 from datetime import UTC, datetime
 from pathlib import Path
 
+# python3 tools/import_rawhide.py (how every workflow invokes this) puts
+# tools/ itself on sys.path, not the repo root, so "tools" is not importable
+# as a package without this. Must run before the tools.common import below.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from tools.common import run
 
