@@ -9,6 +9,38 @@ Fedora dist-git only to seed RPM recipes and patches, then rebuilds verified
 direct-upstream sources on GitHub-hosted runners, publishes a coherent overlay
 repository, and composes images from that repository.
 
+## Using this repository
+
+The factory produces an RPM overlay repository and a bootc base image. To use them:
+
+### RPM overlay repository
+
+Add this dnf config to your `Containerfile` or system:
+
+```
+[hummingbird-github]
+name=Hummingbird GitHub RPM overlay
+baseurl=https://hanthor.github.io/hummingbird-github/
+enabled=1
+gpgcheck=1
+```
+
+### Published base image
+
+For direct use or as a build-from reference:
+
+```
+ghcr.io/hanthor/hummingbird-github-base:rawhide
+```
+
+Example:
+```dockerfile
+FROM ghcr.io/hanthor/hummingbird-github-base:rawhide
+RUN dnf install -y <your-packages>
+```
+
+**Note**: `gpgcheck=1` is configured above but the factory does not yet sign RPMs (tracked in issue #36). Treat this as integrity checking only until signing is implemented.
+
 ## Initial scope
 
 `config/bootstrap-packages.txt` is a dependency-first recipe-seeding set
