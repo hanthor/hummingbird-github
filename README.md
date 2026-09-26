@@ -69,6 +69,31 @@ dedicated, narrowly scoped repository-creation credential.
 
 See [architecture](docs/architecture.md) and [contributing](docs/contributing.md).
 
+## Using this repository
+
+The overlay repository and the base image are published from this factory's
+own build. To point a host or Containerfile at the RPM overlay, add:
+
+```
+[hummingbird-github]
+name=Hummingbird GitHub RPM overlay
+baseurl=https://hanthor.github.io/hummingbird-github/
+enabled=1
+gpgcheck=1
+repo_gpgcheck=0
+```
+
+This is the same repo definition `containers/base/Containerfile` writes when
+composing the factory's own base image, so it is confirmed to match this
+repository's actual output rather than a hypothetical example.
+`gpgcheck=1` is asserted here but the pipeline does not yet sign `repomd.xml`
+(tracked in [#36](https://github.com/hanthor/hummingbird-github/issues/36));
+treat this as a placeholder for that guarantee, not a verified signature yet.
+
+The composed base image is published as
+`ghcr.io/hanthor/hummingbird-github-base:rawhide` and can be used directly as a
+`bootc` source or as a `FROM` base for a derived Containerfile.
+
 ## Hummingbird availability measurement
 
 `Recalculate Hummingbird package gaps` runs every six hours. It pulls the
