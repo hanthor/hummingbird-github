@@ -67,7 +67,7 @@ an independent GitHub repository is intentionally optional: GitHub Actions'
 `GITHUB_TOKEN` cannot create repositories. It can be added later with a
 dedicated, narrowly scoped repository-creation credential.
 
-See [architecture](docs/architecture.md) and [contributing](docs/contributing.md).
+See [architecture](docs/architecture.md), [contributing](docs/contributing.md), and [local validation and development](docs/local-validation.md).
 
 ## Hummingbird availability measurement
 
