@@ -79,6 +79,9 @@ jobs:
               # sources include_str!() at compile time (hybrid-array). Mock
               # build roots keep docs, so do the same here.
               sed -i "/^tsflags=nodocs/d" /etc/dnf/dnf.conf
+              # docker run sets no USER; mock and Koji do, and some test suites
+              # (rust-just env_var tests) read it.
+              export USER=${USER:-$(id -un)}
               dnf -y $disable install dnf-plugins-core mock rpm-build
               spec=$(find "/packages/$PACKAGE" -maxdepth 1 -name "*.spec" -print -quit)
               test -n "$spec"
