@@ -74,6 +74,11 @@ jobs:
               # codec, never a build requirement, and Fedora own noopenh264 provides
               # the same libopenh264.so.8 soname, so disabling the repo resolves.
               disable=--disablerepo=fedora-cisco-openh264
+              # The container image installs with tsflags=nodocs, which drops
+              # every %doc file -- including README.md files that Rust crate
+              # sources include_str!() at compile time (hybrid-array). Mock
+              # build roots keep docs, so do the same here.
+              sed -i "/^tsflags=nodocs/d" /etc/dnf/dnf.conf
               dnf -y $disable install dnf-plugins-core mock rpm-build
               spec=$(find "/packages/$PACKAGE" -maxdepth 1 -name "*.spec" -print -quit)
               test -n "$spec"

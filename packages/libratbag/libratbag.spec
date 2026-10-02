@@ -76,7 +76,10 @@ developing applications that use liblur.
 %meson_build
 
 %check
-%meson_test
+# ratbagctl-test starts its own ratbagd on the D-Bus *system* bus, which a
+# build root does not provide; run every other test.
+%{__meson} test -C %{_vpath_builddir} --print-errorlogs \
+  $(%{__meson} test -C %{_vpath_builddir} --list 2>/dev/null | grep -vx libratbag:ratbagctl-test)
 
 %install
 %meson_install
@@ -110,6 +113,7 @@ developing applications that use liblur.
 %changelog
 * Fri Oct 02 2026 James Reilly <jreilly1821@gmail.com> - 0.18-7
 - Backport upstream fix for SWIG 4.5 (drop removed PyInt_* calls)
+- Skip ratbagctl-test, which needs a D-Bus system bus
 
 * Thu Jul 16 2026 Fedora Release Engineering <releng@fedoraproject.org> - 0.18-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_45_Mass_Rebuild
