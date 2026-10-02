@@ -88,6 +88,24 @@ jobs:
               mkdir -p "$staged"
               cp -a "/packages/$PACKAGE/." "$staged/"
               cp -a "/work/sources/$PACKAGE/." "$staged/"
+              # Specs with %generate_buildrequires (Rust, modern Python) declare
+              # most BuildRequires dynamically, which dnf builddep on the spec
+              # cannot see. Resolve them the way mock does: rpmbuild -br exits
+              # 11 and writes a *.buildreqs.nosrc.rpm while some are missing;
+              # install those and repeat until nothing is missing.
+              brdir=/work/buildreqs/$PACKAGE
+              for round in 1 2 3 4 5 6; do
+                rm -rf "$brdir"
+                rc=0
+                rpmbuild -br "$spec" \
+                  --define "_sourcedir $staged" \
+                  --define "_srcrpmdir $brdir" || rc=$?
+                if [ "$rc" -ne 11 ]; then
+                  break
+                fi
+                dnf -y $disable builddep "$brdir"/*.buildreqs.nosrc.rpm
+              done
+              test "$rc" -eq 0
               rpmbuild -ba "$spec" \
                 --define "_sourcedir $staged" \
                 --define "_rpmdir /work/result"

@@ -8,7 +8,7 @@
 %define glib2_version 2.86.0
 %define gjs_version 1.87.1
 %define gtk4_version 4.0.0
-%define mutter_version 51~alpha
+%define mutter_version 51.0
 %define polkit_version 0.100
 %define gsettings_desktop_schemas_version 50~alpha
 %define gnome_desktop_version 44.0-7
@@ -22,7 +22,7 @@
 %define gnome_settings_daemon_version 3.37.1
 
 Name:           gnome-shell
-Version:        51~beta
+Version:        51.0
 Release:        %autorelease
 Summary:        Window management and application launching for GNOME
 

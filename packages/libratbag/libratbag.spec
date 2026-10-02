@@ -2,7 +2,7 @@
 
 Name:           libratbag
 Version:        0.18
-Release:        6%{?gitdate:.%{gitdate}git%{gitversion}}%{?dist}
+Release:        7%{?gitdate:.%{gitdate}git%{gitversion}}%{?dist}
 Summary:        Programmable input device library
 License:        MIT
 URL:            https://github.com/libratbag/libratbag
@@ -12,6 +12,9 @@ Source0:        https://github.com/libratbag/%{name}/archive/v%{version}/%{name}
 # for now until sure that's a permanent change
 # https://github.com/libratbag/libratbag/issues/1672
 Patch0001:      0001-Revert-build-install-ratbagd-into-sbindir.patch
+# SWIG 4.5 dropped the PyInt_* compatibility macros; backport of upstream
+# https://github.com/libratbag/libratbag/commit/1f4efda9553a5efbbd5be49def22f993ef1410ca
+Patch0002:      0002-swig-use-the-Python-3-C-API-instead-of-PyInt.patch
 
 BuildRequires:  git gcc gcc-c++
 BuildRequires:  meson pkgconfig
@@ -105,6 +108,9 @@ developing applications that use liblur.
 %{_libdir}/pkgconfig/liblur.pc
 
 %changelog
+* Fri Oct 02 2026 James Reilly <jreilly1821@gmail.com> - 0.18-7
+- Backport upstream fix for SWIG 4.5 (drop removed PyInt_* calls)
+
 * Thu Jul 16 2026 Fedora Release Engineering <releng@fedoraproject.org> - 0.18-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_45_Mass_Rebuild
 
