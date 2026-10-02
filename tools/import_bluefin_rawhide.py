@@ -8,8 +8,9 @@ import json
 import re
 import subprocess
 import sys
-import tomllib
 from pathlib import Path
+
+from bluefin_manifest import importable_packages, load
 
 
 def command(*args: str) -> subprocess.CompletedProcess[str]:
@@ -34,11 +35,8 @@ def main() -> int:
     parser.add_argument("--report", type=Path, default=Path("reports/bluefin-rawhide-resolution.json"))
     args = parser.parse_args()
 
-    manifest = tomllib.loads(args.manifest.read_text())
-    binaries = []
-    for section in ("fedora", "multimedia_overrides"):
-        binaries.extend(manifest.get(section, {}).get("packages", []))
-    binaries = sorted(set(binaries))
+    manifest = load(args.manifest)
+    binaries = importable_packages(manifest)
 
     resolved: dict[str, str] = {}
     unavailable: list[dict[str, str]] = []
