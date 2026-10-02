@@ -11,8 +11,10 @@ from __future__ import annotations
 import argparse
 import json
 import subprocess
-import tomllib
+import re
 from pathlib import Path
+
+from bluefin_manifest import importable_packages, load
 
 
 def query(package: str) -> dict[str, str] | None:
@@ -44,10 +46,8 @@ def main() -> int:
     parser.add_argument("--changed", type=Path, default=Path("reports/rawhide-changed-sources.txt"))
     args = parser.parse_args()
 
-    manifest = tomllib.loads(args.manifest.read_text())
-    binaries = sorted(set(
-        manifest["fedora"]["packages"] + manifest["multimedia_overrides"]["packages"]
-    ))
+    manifest = load(args.manifest)
+    binaries = importable_packages(manifest)
     state = {package: query(package) for package in binaries}
     state = {package: value for package, value in state.items() if value}
     previous = json.loads(args.state.read_text()) if args.state.exists() else {}

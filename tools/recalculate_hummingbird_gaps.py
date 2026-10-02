@@ -5,9 +5,10 @@ from __future__ import annotations
 
 import argparse
 import json
-import tomllib
 from datetime import UTC, datetime
 from pathlib import Path
+
+from bluefin_manifest import contract_packages, load
 
 
 def lines(path: Path) -> set[str]:
@@ -23,13 +24,10 @@ def main() -> int:
     parser.add_argument("--image", required=True)
     args = parser.parse_args()
 
-    manifest = tomllib.loads(args.manifest.read_text())
+    manifest = load(args.manifest)
     # Version-specific lists are intentionally included: this is the full
     # Bluefin contract, independent of whichever Fedora release consumes it.
-    contract = set()
-    for section, values in manifest.items():
-        if section != "excluded" and isinstance(values, dict):
-            contract.update(values.get("packages", []))
+    contract = set(contract_packages(manifest))
     image, repo = lines(args.image_packages), lines(args.repo_packages)
     available = image | repo
     report = {
