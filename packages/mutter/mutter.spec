@@ -4,19 +4,19 @@
 %global gobject_introspection_version 1.41.4
 %global gtk3_version 3.19.8
 %global gtk4_version 4.14.0
-%global gsettings_desktop_schemas_version 47~beta
+%global gsettings_desktop_schemas_version 51~alpha
 %global pixman_version 0.42
 %global libei_version 1.3.901
 %global wayland_server_version 1.24
 %global wayland_protocols_version 1.48
-%global libinput_version 1.30.0
+%global libinput_version 1.31.0
 %global libdrm_version 2.4.118
 %global pipewire_version 1.6.0
 
 %global mutter_api_version 51
 
 Name:          mutter
-Version:       51~beta
+Version:       51.0
 Release:       %autorelease
 Summary:       Window and compositing manager based on Clutter
 

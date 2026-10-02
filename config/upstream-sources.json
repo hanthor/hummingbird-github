@@ -76,11 +76,11 @@
     },
     {
       "name": "gnome-shell",
-      "version": "51.beta",
-      "url": "https://download.gnome.org/sources/gnome-shell/51/gnome-shell-51.beta.tar.xz",
-      "filename": "gnome-shell-51.beta.tar.xz",
-      "sha512": "0f4dfdf4a8ea050c902b7bcc22e141932b1a33cf6c61f83d478d8495fb21711c8d639b0956ef2a5b7bae5580d88b0a3f7a53abccd544ff17d4ae2137542f77c2",
-      "sha256_url": "https://download.gnome.org/sources/gnome-shell/51/gnome-shell-51.beta.sha256sum"
+      "version": "51.0",
+      "url": "https://download.gnome.org/sources/gnome-shell/51/gnome-shell-51.0.tar.xz",
+      "filename": "gnome-shell-51.0.tar.xz",
+      "sha512": "15ea0700fa803ec64c97f8d2c2d7ea9a97be4a99d2570384c3c2efb3c2ee0d3be128cff0d7aedc014c9152e8ebadb21aa86811e1d67ffe7aca6c826fb516b3c5",
+      "sha256_url": "https://download.gnome.org/sources/gnome-shell/51/gnome-shell-51.0.sha256sum"
     },
     {
       "name": "gnome-tweaks",
@@ -213,11 +213,11 @@
     },
     {
       "name": "mutter",
-      "version": "51.beta",
-      "url": "https://download.gnome.org/sources/mutter/51/mutter-51.beta.tar.xz",
-      "filename": "mutter-51.beta.tar.xz",
-      "sha512": "dea4ad2de6ae83f7488f5330281c26c4e4cd2439f34700546b3ca44729a8762275b94260b6cc72e02990231b9b1afb00d58df5def9734426a01cd33aed4bde8a",
-      "sha256_url": "https://download.gnome.org/sources/mutter/51/mutter-51.beta.sha256sum"
+      "version": "51.0",
+      "url": "https://download.gnome.org/sources/mutter/51/mutter-51.0.tar.xz",
+      "filename": "mutter-51.0.tar.xz",
+      "sha512": "61f2e9b368e768f8e53682496b35e52f712f5f85c47cf0ec78668ed39f7d925d361deca5b69a39bc1777cfdf5df9608a153efeb47a0f8f31c0a474b93ebcf7a6",
+      "sha256_url": "https://download.gnome.org/sources/mutter/51/mutter-51.0.sha256sum"
     },
     {
       "name": "openrgb",

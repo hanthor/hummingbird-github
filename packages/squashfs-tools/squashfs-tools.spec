@@ -6,7 +6,7 @@ Summary: Utility for the creation of squashfs filesystems
 %forgemeta
 URL:	 %{forgeurl}
 Source:  %{forgesource}
-Release: 2%{dist}
+Release: 3%{dist}
 License: GPL-2.0-or-later
 
 BuildRequires: make
@@ -18,6 +18,9 @@ BuildRequires: libattr-devel
 BuildRequires: lz4-devel
 BuildRequires: libzstd-devel
 BuildRequires: help2man
+# install-manpages.sh locates the non-builtin echo and gzip with which(1); the
+# Koji buildroot carries it implicitly, a plain container build root does not.
+BuildRequires: which
 
 %description
 Squashfs is a highly compressed read-only filesystem for Linux.  This package
@@ -52,6 +55,9 @@ make INSTALL_PREFIX=%{buildroot}/usr INSTALL_DIR=%{buildroot}%{_sbindir} INSTALL
 %{_sbindir}/sqfscat
 
 %changelog
+* Fri Oct 02 2026 James Reilly <jreilly1821@gmail.com> - 4.7.4-3
+- BuildRequire which, needed by install-manpages.sh
+
 * Fri Jul 17 2026 Fedora Release Engineering <releng@fedoraproject.org> - 4.7.4-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_45_Mass_Rebuild
 
