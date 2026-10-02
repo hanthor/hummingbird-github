@@ -11,6 +11,14 @@ import sys
 import tomllib
 from pathlib import Path
 
+# python3 tools/import_bluefin_rawhide.py (how its workflow invokes this) puts
+# tools/ itself on sys.path, not the repo root, so "tools" is not importable
+# as a package without this. Must run before the tools.import_rawhide import
+# below.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from tools.import_rawhide import import_package
+
 
 def command(*args: str) -> subprocess.CompletedProcess[str]:
     return subprocess.run(args, text=True, capture_output=True, check=False)
@@ -59,11 +67,11 @@ def main() -> int:
         if destination.exists():
             imported.append(source)
             continue
-        result = command(sys.executable, "tools/import_rawhide.py", source, "--destination", str(args.destination))
-        if result.returncode == 0:
+        try:
+            import_package(source, destination_root=args.destination)
             imported.append(source)
-        else:
-            failures.append({"source": source, "reason": result.stderr.strip() or result.stdout.strip()})
+        except (ValueError, FileExistsError, subprocess.CalledProcessError) as error:
+            failures.append({"source": source, "reason": str(error)})
 
     report = {
         "upstream_manifest": "https://github.com/projectbluefin/bluefin/blob/main/build_files/packages/base.toml",
