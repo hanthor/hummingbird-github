@@ -13,14 +13,19 @@ import argparse
 import json
 import re
 import subprocess
+import sys
 import tempfile
 import urllib.parse
 import urllib.request
 from pathlib import Path
 
+# python3 tools/dist_git.py (how every workflow invokes this) puts tools/
+# itself on sys.path, not the repo root, so "tools" is not importable as a
+# package without this. Must run before the tools.common import below.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-def command(*args: str, cwd: Path) -> str:
-    return subprocess.check_output(args, cwd=cwd, text=True).strip()
+
+from tools.common import nvr_from_spec, run
 
 
 def koji_complete(nvr: str) -> bool:
@@ -34,18 +39,6 @@ def koji_complete(nvr: str) -> bool:
     with urllib.request.urlopen(request, timeout=30) as response:
         build = json.load(response).get("result")
     return bool(build and build.get("state") == 1)  # Koji BUILD_STATES[COMPLETE]
-
-
-def nvr_from_spec(spec: Path) -> str:
-    fields: dict[str, str] = {}
-    for line in spec.read_text(errors="replace").splitlines():
-        match = re.match(r"^(Name|Version|Release):\s*(\S+)", line)
-        if match:
-            fields[match.group(1).lower()] = match.group(2).replace("%{?dist}", "")
-    missing = {"name", "version", "release"} - fields.keys()
-    if missing:
-        raise ValueError(f"missing spec fields: {', '.join(sorted(missing))}")
-    return "{name}-{version}-{release}".format(**fields)
 
 
 def main() -> int:
@@ -63,7 +56,7 @@ def main() -> int:
             raise SystemExit(f"expected exactly one spec file, found {len(specs)}")
         nvr = nvr_from_spec(specs[0])
         result = {"package": args.package, "remote": remote, "branch": args.branch,
-                  "commit": command("git", "rev-parse", "HEAD", cwd=checkout), "nvr": nvr,
+                  "commit": run("git", "rev-parse", "HEAD", cwd=checkout), "nvr": nvr,
                   "koji_complete": koji_complete(nvr)}
     print(json.dumps(result, sort_keys=True))
     return 0 if result["koji_complete"] else 2
